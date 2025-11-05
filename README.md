@@ -111,6 +111,3 @@ pip install -r requirements.txt
 pytest -v
 ```
 
----
-
-Would you like me to add a **“Project Overview” diagram or architecture section** (in Markdown with ASCII or Mermaid format) showing how pages, config, and tests connect? That often looks great for recruiters viewing your GitHub.
