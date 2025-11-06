@@ -1,3 +1,6 @@
+
+---
+
 # 🧪 Python Selenium Practice Framework
 
 A lightweight, modular automation testing framework built using **Python**, **Selenium**, and **Pytest**.
@@ -110,4 +113,3 @@ pip install -r requirements.txt
 # 4. Run tests
 pytest -v
 ```
-

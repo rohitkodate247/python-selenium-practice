@@ -1,0 +1,73 @@
+'''
+Hands on exercise
+Instructions
+1. Go to url  https://www.carta.com
+2. Navigate to Products > Fund Management > SPVs.
+3. Navigate to View pricing & plans.
+4. Make sure the page loads
+'''
+
+#
+
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+# import Wait (To Support Wait)
+
+def test_navigate_to_carta_com():
+    driver = webdriver.Chrome(
+                    service=ChromeService(ChromeDriverManager().install())
+                )
+    
+    # URL = https://www.carta.com
+    # Start implementing test here
+    driver.get('https://www.carta.com')
+    Implicitly.wait(5)
+    
+    driver.get([id='burger-menu']).isVisible.Click()
+    driver.get([id='Fund Management']).isVisible.Click()
+    driver.get([id='SPVs']).isVisible.Click()
+    
+    
+    
+    
+    
+tests/pages/login_page.py:
+  
+# Login Page -> conftest.py
+class LoginPage:
+  def init(self, driver):
+      self.driver = driver
+
+# Login Func -> setting.py 
+  def login(self, username, password): 
+      self.driver.find_element("id", "username").send_keys(username)
+      self.driver.find_element("id", "password").send_keys(password)    
+      self.driver.find_element("id", "submit").click()
+
+tests/test_login.py:
+
+#
+def test_valid_login(driver):
+    login = LoginPage(driver)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    login.login("user1", "secret")
+    assert "dashboard" in driver.current_url
